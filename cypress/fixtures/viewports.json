@@ -1,0 +1,22 @@
+[
+    {
+      "device": "MacBook 15",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "device": "iPad Pro",
+      "width": 1024,
+      "height": 1366
+    },
+    {
+      "device": "iPhone X",
+      "width": 375,
+      "height": 812
+    },
+    {
+      "device": "Samsung Galaxy S10",
+      "width": 360,
+      "height": 760
+    }
+  ]
