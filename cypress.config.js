@@ -11,6 +11,5 @@ module.exports = defineConfig({
     pageLoadTimeout: 30000, 
     supportFile: 'cypress/support/e2e.js', 
     specPattern: 'cypress/e2e/**/*.cy.js',
-
   },
 });
