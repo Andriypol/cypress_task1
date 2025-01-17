@@ -3,7 +3,7 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    projectId: Cypress.env('PROJECT_ID'),
+    projectId: process.env.CYPRESS_PROJECT_ID,
     baseUrl: 'https://telnyx.com', 
     viewportWidth: 1440, 
     viewportHeight: 900, 
