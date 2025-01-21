@@ -1,5 +1,5 @@
 /// <reference types= 'cypress'/>
-import HomePage from '..support/page_objects/homePage';
+import HomePage from '../support/page_objects/homePage.js';
 
 
 describe('Telnyx Homepage Load Test', () => {

@@ -1,7 +1,7 @@
 /// <reference types= 'cypress'/>
 
-import HomePage from '../support/page_objects/homePage';
-import LoginPage from '../support/page_objects/loginPage';
+import HomePage from '../support/page_objects/homePage.js';
+import LoginPage from '../support/page_objects/loginPage.js';
 
 describe('Telnyx Log In Functionality', () => {
     const homePage = new HomePage();

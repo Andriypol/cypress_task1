@@ -1,6 +1,6 @@
 /// <reference types= 'cypress'/>
 import navLinks from '../fixtures/menu_links.json';
-import NavigationPage from '../support/page_objects/navigationPage';
+import NavigationPage from '../support/page_objects/navigationMenu.js';
 
 
 describe('Telnyx Navigation Menu Functionality Test', () => {

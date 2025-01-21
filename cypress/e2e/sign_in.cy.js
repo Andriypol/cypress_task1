@@ -1,8 +1,8 @@
 /// <reference types= 'cypress'/>
 
 const { faker } = require('@faker-js/faker');
-import SignUpPage from '../support/pages/signupPage';
-import HomePage from '../support/pages/homePage';
+import SignUpPage from '../support/page_objects/signupPage.js';
+import HomePage from '../support/page_objects/homePage.js';
 
 const email = faker.internet.email();
 const name = faker.person.firstName();

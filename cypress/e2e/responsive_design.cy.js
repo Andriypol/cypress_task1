@@ -1,6 +1,6 @@
 /// <reference types= 'cypress'/>
 import viewports from '../fixtures/viewports.json';
-import HomePage from '../support/page_objects/homePage';
+import HomePage from '../support/page_objects/homePage.js';
 
 describe('Telnyx Responsive Design Test', () => {
     const homePage = new HomePage();
