@@ -1,38 +1,26 @@
 /// <reference types= 'cypress'/>
+import HomePage from '..support/page_objects/homePage';
+
 
 describe('Telnyx Homepage Load Test', () => {
-  
-    beforeEach(() => {
-      cy.visit('/');
-    });
-  
-    it('should load the homepage successfully', () => {
+  const homePage = new HomePage();
 
-      cy.title().should('not.be.empty');
-  
-      cy.get('header').should('be.visible'); 
-      cy.get('footer').should('be.visible'); 
-      cy.get('main').should('be.visible'); 
+  beforeEach(() => {
+    homePage.visit();
+  });
 
-    });
-  
-   // Measure the page load time
-      it('should load within acceptable time (3 seconds)', () => {
+  it('should load the homepage successfully', () => {
+    homePage.verifyPageTitle().should('not.be.empty');
 
-        cy.window().then((win) => {
-          const performanceEntries = win.performance.getEntriesByType('navigation');
-      
-          if (performanceEntries.length > 0) {
-            const navigationTiming = performanceEntries[0]; 
-            const loadTime = navigationTiming.domContentLoadedEventEnd - navigationTiming.startTime;
-            cy.log(`Page load time: ${loadTime}ms`);
-            expect(loadTime).to.be.lessThan(3000); // Assert load time is under 3 seconds
-          } else {
-            throw new Error('Navigation timing data not available.');
-          }
-        });
-      });
-     
-    });
+    homePage.getHeader().should('be.visible');
+    homePage.getFooter().should('be.visible');
+    homePage.getMainContent().should('be.visible');
+  });
+
+  it('should load within acceptable time (3 seconds)', () => {
+    homePage.measurePageLoadTime();
+  });
+});
+
 
 

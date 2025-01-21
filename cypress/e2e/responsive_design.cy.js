@@ -1,10 +1,12 @@
 /// <reference types= 'cypress'/>
 import viewports from '../fixtures/viewports.json';
+import HomePage from '../support/page_objects/homePage';
 
 describe('Telnyx Responsive Design Test', () => {
-  
+    const homePage = new HomePage();
+    
     beforeEach(() => {
-      cy.visit('/');
+      homePage.visit();
     });
   
     viewports.forEach(({ device, width, height }) => {
@@ -17,10 +19,10 @@ describe('Telnyx Responsive Design Test', () => {
   
           if (width <= 768) {
             // For smaller screens, ensure the hamburger menu is visible
-            cy.get('button[aria-controls="main-menu-content"] svg[aria-hidden="true"]').should('be.visible');
+            homePage.getHamburgerIcon().should('be.visible');
           } else {
             // For larger screens, ensure the full menu is visible
-            cy.get('button[aria-controls="main-menu-content"] svg[aria-hidden="true"]').should('not.be.visible');
+            homePage.getHamburgerIcon().should('not.be.visible');
           }
         });
         
