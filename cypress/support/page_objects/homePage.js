@@ -33,7 +33,7 @@ class HomePage {
     getHamburgerIcon() {
         return cy.get(this.elements.hamburgerIcon)
     }
-
+    
     // URL verification
     verifyLoginPageUrl() {
         cy.url().should('include', this.elements.loginUrl);

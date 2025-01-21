@@ -2,7 +2,6 @@
 class SignUpPage {
     // Selectors
     elements = {
-      signUpLink: '#main-menu a[href="/sign-up"]',
       registrationForm: 'form',
       emailLabel: 'label[for="email"]',
       firstNameLabel: 'label[for="first_name"]',
@@ -17,15 +16,6 @@ class SignUpPage {
       errorMessage: '.c-UUKrH-kDyeyw-type-error',
       verificationHeading: 'h1 span',
     };
-  
-    // Actions
-    visitHomePage() {
-      cy.visit('/');
-    }
-  
-    navigateToSignUp() {
-      cy.get(this.elements.signUpLink).click();
-    }
   
     verifyRegistrationFormVisible() {
       cy.get(this.elements.registrationForm).should('be.visible');
