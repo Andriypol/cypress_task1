@@ -4,10 +4,10 @@ This project contains automated UI tests for Telnyx website using Cypress / Acti
 ## **Prerequisites**
 Before running the tests, make sure you have installed:
 
-Node.js (v18 or higher)
-npm (usually comes with Node.js)
-Git
-Cypress Cloud(Dashboard)
+Node.js (v18 or higher)\
+npm (usually comes with Node.js)\
+Git\
+Cypress Cloud(Dashboard)\
 
 ## **Installation**
 
@@ -21,14 +21,14 @@ Navigate to the project directory:
 
 Install dependencies:
 
-**`npm install cypress`**
+**`npm install cypress`**\
 **`npm install faker`**
 
 ## **Configuration**
 
 Create environment variables in the Actions:
 
-CYPRESS_VALID_EMAIL
+CYPRESS_VALID_EMAIL\
 CYPRESS_VALID_PASSWORD
 
 ## **Test Reports**
