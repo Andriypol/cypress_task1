@@ -29,7 +29,7 @@ class LoginPage {
     }
 
     clickSubmit() {
-        cy.get(elements.submitButton).click();
+        cy.get(this.elements.submitButton).click();
     }
 
     login(email, password) {
