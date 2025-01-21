@@ -1,13 +1,14 @@
 /// <reference types= 'cypress'/>
 import navLinks from '../fixtures/menu_links.json';
 import NavigationPage from '../support/page_objects/navigationMenu.js';
-
+import HomePage from '../support/page_objects/homePage.js';
 
 describe('Telnyx Navigation Menu Functionality Test', () => {
   const navigationPage = new NavigationPage();
+  const homePage = new HomePage();
 
   beforeEach(() => {
-    navigationPage.visit();
+    homePage.visit();
   });
 
   it('should display the navigation menu and all its links', () => {

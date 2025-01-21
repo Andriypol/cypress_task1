@@ -10,7 +10,7 @@ describe('Telnyx Homepage Load Test', () => {
   });
 
   it('should load the homepage successfully', () => {
-    homePage.verifyPageTitle().should('not.be.empty');
+    cy.title().should('not.be.empty');
 
     homePage.getHeader().should('be.visible');
     homePage.getFooter().should('be.visible');
