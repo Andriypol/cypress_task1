@@ -9,6 +9,7 @@ describe('Telnyx Log In Functionality', () => {
     const email = Cypress.env('VALID_EMAIL');
     const password = Cypress.env('VALID_PASSWORD');
     
+    
     beforeEach(() => {
         homePage.visit();
         homePage.clickOnLogin();
@@ -29,8 +30,8 @@ describe('Telnyx Log In Functionality', () => {
     });
 
     it('should show error on submitting blank form', () => {
-        loginPage.elements.emailInput().click();
-        loginPage.elements.passwordInput().click();
+        cy.get(loginPage.elements.emailInput).click();
+        cy.get(loginPage.elements.passwordInput).click();
         loginPage.clickSubmit();
         loginPage.verifyBlankFormErrors();
     });
