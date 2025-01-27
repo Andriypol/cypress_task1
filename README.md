@@ -7,7 +7,7 @@ Before running the tests, make sure you have installed:
 Node.js (v18 or higher)\
 npm (usually comes with Node.js)\
 Git\
-Cypress Cloud(Dashboard)\
+Cypress Cloud(Dashboard)
 
 ## **Installation**
 
