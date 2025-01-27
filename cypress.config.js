@@ -3,7 +3,7 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    projectId: ew3vt3,
+    projectId: 'ew3vt3',
     baseUrl: 'https://telnyx.com', 
     viewportWidth: 1440, 
     viewportHeight: 900, 
