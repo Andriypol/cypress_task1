@@ -6,8 +6,8 @@ import LoginPage from '../support/page_objects/loginPage.js';
 describe('Telnyx Log In Functionality', () => {
     const homePage = new HomePage();
     const loginPage = new LoginPage();
-    const email = Cypress.env('VALID_EMAIL');
-    const password = Cypress.env('VALID_PASSWORD');
+    const email = process.env.CYPRESS_VALID_EMAIL;
+    const password = process.env.CYPRESS_VALID_PASSWORD;
     
     
     beforeEach(() => {
